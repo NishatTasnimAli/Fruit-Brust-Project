@@ -1,0 +1,10 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.content-fruit{
+    position: absolute;
+    top:550px;
+    left: 150px;
+}

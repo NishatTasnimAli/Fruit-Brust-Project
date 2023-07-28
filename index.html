@@ -3,11 +3,568 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Fruit Burst</title>
+    <!-- Tailwind and Daisy Ui CDN -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.0/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- Google Font Link -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,300;1,900&family=Work+Sans:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <link rel="shortcut icon" href="Styles/images/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="Styles/style.css">
+    <style>
+           .font-lato{
+            font-family: 'Lato', sans-serif;
+            font-family: 'Work Sans', sans-serif;
+           }
+    </style>
+    <!-- Custom Tailwind Classes -->
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+                'fruit-primary': '#F85559',
+              }
+            }
+          }
+        }
+      </script>
 </head>
-<body>
-    
+<body class="font-lato">
+    <header class="m-4 rounded-bl-full">
+        <nav>
+          <div class="navbar lg:bg-fruit-primary rounded-full p-2 md:bg-fruit-primary sm:bg-white">
+            <div class="navbar-center md:flex lg:flex ">
+              <div class="dropdown">
+                <label tabindex="0" class="btn btn-ghost lg:hidden">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                </label>
+                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2  text-lg text-black-50  shadow bg-white font-medium rounded-box w-52">
+                    <li><a>Home</a></li>   
+                    <li><a>About Us</a></li>
+                    <li><a>Shop</a></li>
+                    <li><a>All Fruits</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="navbar-start hidden  lg:flex">
+              <ul class="menu menu-horizontal px-1 text-lg text-slate-50 font-medium ">
+                <li><a>Home</a></li>   
+                    <li><a>About Us</a></li>
+                    <li><a>Shop</a></li>
+                    <li><a>All Fruits</a></li>
+              </ul>
+            </div>
+            <div class="navbar-center">
+                <a class="btn btn-ghost normal-case text-4xl lg:text-slate-50 font-normal md:text-slate-50">
+                    <img src="Styles/images/logo.png" alt="Logo" class="w-12 h-12">Fruit Burst</a>
+            </div>
+            <div class="navbar-end mx-2 hidden md:flex lg:flex">
+                <button class="btn btn-white-50 btn-rounded rounded-full w-80 justify-start text-gray-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>Search Here
+                  </button>
+            </div>
+          </div>
+        </nav>   
+            <!-- Slider  -->
+            <div class="carousel w-full my-5 lg:h-full sm:full">
+                <div id="slide1" class="carousel-item relative w-full ">
+                    <div class="absolute left-0 my-auto lg:top-1/3  w-full space-y-7 top-1/3">
+                        <h1  class=" w-full text-center text-bold lg:text-5xl text-white font-bold sm:text-xl md:2xl" >Exotic tastes at your<br> doorstep</h1>
+                        <p class="  w-full text-center text-bold lg:text-xl text-white font-normal sm:text-xs md:text-lg" >We supply highly quality organic products</p>
+                         <button class=" w-full"><span class="lg:w-20 lg:h-20 p-2 text-center text-bold lg:text-xl text-white font-bold bg-fruit-primary m-50 rounded-lg sm:w-10 sm:h10 sm:text-xs">Shop Now</span></button>
+                    </div>
+                  <img src="Styles/images/banner1.png" class="w-full h-[600px] inset-0 bg-black-900 bg-opacity-50" />
+                  <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <a href="#slide4" class="btn btn-circle">❮</a> 
+                    <a href="#slide2" class="btn btn-circle">❯</a>
+                  </div>
+                </div> 
+                <div id="slide2" class="carousel-item relative w-full">
+                    <div id="slide1" class="carousel-item relative w-full ">
+                        <div class="absolute left-0 my-auto lg:top-1/3  w-full space-y-7 top-1/3">
+                            <h1  class=" w-full text-center text-bold lg:text-5xl text-white font-bold sm:text-xl md:2xl" >Exotic tastes at your<br> doorstep</h1>
+                            <p class="  w-full text-center text-bold lg:text-xl text-white font-normal sm:text-xs md:text-lg" >We supply highly quality organic products</p>
+                             <button class=" w-full"><span class="lg:w-20 lg:h-20 p-2 text-center text-bold lg:text-xl text-white font-bold bg-fruit-primary m-50 rounded-lg sm:w-10 sm:h10 sm:text-xs">Shop Now</span></button>
+                        </div>
+                  <img src="Styles/images/banner2.png" class="w-full h-[600px] inset-0 bg-grey-900 bg-opacity-60" />
+                  <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <a href="#slide1" class="btn btn-circle">❮</a> 
+                    <a href="#slide3" class="btn btn-circle">❯</a>
+                  </div>
+                </div> 
+                <div id="slide3" class="carousel-item relative w-full">
+                    <div class="absolute left-0 my-auto lg:top-1/3  w-full space-y-7 top-1/3">
+                        <h1  class=" w-full text-center text-bold lg:text-5xl text-white font-bold sm:text-xl md:2xl" >Exotic tastes at your<br> doorstep</h1>
+                        <p class="  w-full text-center text-bold lg:text-xl text-white font-normal sm:text-xs md:text-lg" >We supply highly quality organic products</p>
+                         <button class=" w-full"><span class="lg:w-20 lg:h-20 p-2 text-center text-bold lg:text-xl text-white font-bold bg-fruit-primary m-50 rounded-lg sm:w-10 sm:h10 sm:text-xs">Shop Now</span></button>
+                    </div>
+                  <img src="Styles/images/banner3.png" class="w-full h-[600px] inset-0 bg-grey-900 bg-opacity-80" />
+                  <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <a href="#slide2" class="btn btn-circle">❮</a> 
+                    <a href="#slide4" class="btn btn-circle">❯</a>
+                  </div>
+                </div> 
+                <div id="slide4" class="carousel-item relative w-full">
+                    <div class="absolute left-0 my-auto lg:top-1/3  w-full space-y-7 top-1/3">
+                        <h1  class=" w-full text-center text-bold lg:text-5xl text-white font-bold sm:text-xl md:2xl" >Exotic tastes at your<br> doorstep</h1>
+                        <p class="  w-full text-center text-bold lg:text-xl text-white font-normal sm:text-xs md:text-lg" >We supply highly quality organic products</p>
+                         <button class=" w-full"><span class="lg:w-20 lg:h-20 p-2 text-center text-bold lg:text-xl text-white font-bold bg-fruit-primary m-50 rounded-lg sm:w-10 sm:h10 sm:text-xs">Shop Now</span></button>
+                    </div>
+                  <img src="Styles/images/banner4.png" class="w-full  h-[600px] bg-blend-lighten hover:bg-blend-overlay" />
+                  <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <a href="#slide3" class="btn btn-circle">❮</a> 
+                    <a href="#slide1" class="btn btn-circle">❯</a>
+                  </div>
+                </div>
+              </div>
+    </header>
+    <main>
+        <section class=" content-fruit hidden h-96 lg:flex border-b-2 rounded-b-lg mb-5">
+                <div class="grid grid-cols-5 gap-5  justify-items-center w-[1196px] m-auto p-4 bg-white	rounded-lg space-y-4">
+                    <div class="items-center">
+                        <img src="Styles/images/fruit1.png" alt="">
+                        <h5 class="text-center font-normal text-xl">Cranberry</h5>
+                    </div>
+                    <div class="items-center">
+                        <img src="Styles/images/fruit2.png" alt="">
+                        <h5 class="text-center font-normal text-xl">Orange</h5>
+                    </div>
+                    <div class="items-center">
+                        <img src="Styles/images/fruit3.png" alt="">
+                        <h5 class="text-center font-normal text-xl">Mango</h5>
+                    </div>
+                    <div class="items-center">
+                        <img src="Styles/images/fruit4.png" alt="">
+                        <h5 class="text-center font-normal text-xl">Strawberry</h5>
+                    </div>
+                    <div class="items-center">
+                        <img src="Styles/images/fruit5.png" alt="">
+                        <h5 class="text-center font-normal text-xl">Pomegranate</h5>
+                    </div>
+                </div>
+            </div>    
+        </section>
+        <section class="m-96">
+
+        </section>
+        <section class="w-[1440px] my-20 mx-auto justify-items-center">
+            <div class="container grid lg:grid-cols-2 w-full mb-5 md:grid-cols-1 sm:grid-cols-1">
+                <div class="content lg:w-50 md:w-full sm:w-full px-3 space-y-4">
+                    <h1 class="lg:text-left font-bold text-6xl md:text-center md:text-4xl sm:text-center sm:text-lg">Deal of the day</h1>
+                    <p class="lg:text-left font-normal text-sm md:text-center sm:text-center ">Contrary to popular belief, is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+                </div>
+                <div class="date-time w-full me-end p-5">
+                    <div class="grid grid-cols-7 gap-7  m-auto justify-items-center"">
+                        <div class="items-center">
+                            <h2 class="text-center font-bold text-lg">29</h2>
+                            <p class="text-center font-bold text-lg">Days</p>
+                        </div>
+                        <div class="items-center">
+                            <h2><i class="fa-solid fa-ellipsis-vertical"></i></h2> 
+                        </div>
+                        <div class="items-center">
+                            <h2 class="text-center font-bold text-lg">15</h2>
+                            <p class="text-center font-bold text-lg">Hours</p>
+                        </div>
+                        <div class="items-center">
+                            <h2><i class="fa-solid fa-ellipsis-vertical"></i></h2> 
+                        </div>
+                        <div class="items-center">
+                            <h2 class="text-center font-bold text-lg">25</h2>
+                            <p class="text-center font-bold text-lg">Minutes</p>
+                        </div>
+                        <div class="items-center">
+                            <h2><i class="fa-solid fa-ellipsis-vertical"></i></h2> 
+                        </div>
+                        <div class="items-center">
+                            <h2 class="text-center font-bold text-lg">08</h2>
+                            <p class="text-center font-bold text-lg">Seconds</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full">
+                <div class="grid lg:grid-cols-4 lg:gap-4 lg:mx-auto lg:p-5 md:grid-cols-1 md:gap-2 sm:grid-cols-1 sm:gap-2 md:p-0 sm:p-0 md:mx-0 sm:mx-0 lg:w-full md:w-full sm:w-full">
+                        <div class=" items-center space-y-4 lg:m-auto lg:p-5 lg:w-full md:w-48 sm:w-1/2 border border-black-500 rounded-lg">
+                            <img src="Styles/images/fruit6.png" alt="" class="m-auto">
+                            <h4 class="text-center font-bold text-lg">12.90$ - 18.85$</h4>
+                            <hr class="w-2/3 m-auto">
+                            <p class="text-center">Apples</p>
+                            <div class="grid grid-cols-1 m-auto justify-items-center space-y-4">
+                                <div class="items-center">
+                                    <span class="items-center">
+                                        <i class="fa-solid fa-star" style="color: #fd9696;"></i>
+                                        <i class="fa-solid fa-star-half-stroke" style="color: rgb(255, 117, 117);"></i>
+                                        <i class="fa-solid fa-star" style="color: #ffbebe"></i>
+                                        <i class="fa-solid fa-star" style="color: #ffbebe"></i>
+                                        <i class="fa-solid fa-star" style="color: #ffbebe"></i>
+                                    </span>
+                                </div>
+                                <div class="items-center">
+                                    <!-- Open the modal using ID.showModal() method -->
+                                    <button class=" text-center font-normal text-fruit-primary text-lg" onclick="my_modal_1.showModal()">Details</button>
+                                    <dialog id="my_modal_1" class="modal modal-bottom sm:modal-middle">
+                                    <form method="dialog" class="modal-box">
+                                        <img src="Styles/images/fruit6.png" alt="" class="m-auto">
+                                        <h3 class="font-bold text-lg text-center">Apples</h3>
+                                        <p class="py-4 text-center">Professional employees are there for you to pick the most amazing and fresh fruits.</p>
+                                        <div class="grid grid-cols-1 m-auto justify-items-center space-y-4">
+                                            <div class="items-center">
+                                                <span class="items-center">
+                                                    <i class="fa-solid fa-star" style="color: #fd9696;"></i>
+                                                    <i class="fa-solid fa-star-half-stroke" style="color: rgb(255, 117, 117);"></i>
+                                                    <i class="fa-solid fa-star" style="color: #ffbebe"></i>
+                                                    <i class="fa-solid fa-star" style="color: #ffbebe"></i>
+                                                    <i class="fa-solid fa-star" style="color: #ffbebe"></i>
+                                                </span>
+                                            
+                                            </div>
+                                        <div class="modal-action">
+                                        <!-- if there is a button in form, it will close the modal -->
+                                        <button class=" p-2 text-center font-normal text-fruit-primary text-lg border-fruit-primary border-2 rounded-lg">Close</button>
+                                        <button class="text-center font-normal bg-fruit-primary text-lg text-white p-2 rounded-lg">Buy Now</button>
+                                        </div>
+                                    </form>
+                                    </dialog>   
+                                </div>
+                        </div>
+                        </div>
+                        <div class=" items-center space-y-4 lg:m-auto lg:p-5 lg:w-full md:w-48 sm:w-1/2 border border-black-500 rounded-lg">
+                            <img src="Styles/images/fruit7.png" alt="" class="m-auto">
+                            <h4 class="text-center font-bold text-lg">12.90$ - 18.85$</h4>
+                            <hr class="w-2/3 m-auto">
+                            <p class="text-center">Orange</p>
+                            <div class="grid grid-cols-1 m-auto justify-items-center space-y-4">
+                                <div class="items-center">
+                                    <span class="items-center">
+                                        <i class="fa-solid fa-star" style="color: #fd9696;"></i>
+                                        <i class="fa-solid fa-star-half-stroke" style="color: rgb(255, 117, 117);"></i>
+                                        <i class="fa-solid fa-star" style="color: #ffbebe"></i>
+                                        <i class="fa-solid fa-star" style="color: #ffbebe"></i>
+                                        <i class="fa-solid fa-star" style="color: #ffbebe"></i>
+                                    </span>
+                                
+                                </div>
+                                <div class="items-center">
+                                    <!-- Open the modal using ID.showModal() method -->
+                                    <button class=" text-center font-normal text-fruit-primary text-lg" onclick="my_modal_3.showModal()">Details</button>
+                                    <dialog id="my_modal_3" class="modal modal-bottom sm:modal-middle">
+                                    <form method="dialog" class="modal-box">
+                                        <img src="Styles/images/fruit7.png" alt="" class="m-auto">
+                                        <h3 class="font-bold text-lg text-center">Orange</h3>
+                                        <p class="py-4 text-center">Professional employees are there for you to pick the most amazing and fresh fruits.</p>
+                                        <div class="grid grid-cols-1 m-auto justify-items-center space-y-4">
+                                            <div class="items-center">
+                                                <span class="items-center">
+                                                    <i class="fa-solid fa-star" style="color: #fd9696;"></i>
+                                                    <i class="fa-solid fa-star-half-stroke" style="color: rgb(255, 117, 117);"></i>
+                                                    <i class="fa-solid fa-star" style="color: #ffbebe"></i>
+                                                    <i class="fa-solid fa-star" style="color: #ffbebe"></i>
+                                                    <i class="fa-solid fa-star" style="color: #ffbebe"></i>
+                                                </span>
+                                            
+                                            </div>
+                                        <div class="modal-action">
+                                        <!-- if there is a button in form, it will close the modal -->
+                                        <button class=" p-2 text-center font-normal text-fruit-primary text-lg border-fruit-primary border-2 rounded-lg">Close</button>
+                                        <button class="text-center font-normal bg-fruit-primary text-lg text-white p-2 rounded-lg">Buy Now</button>
+                                        </div>
+                                    </form>
+                                    </dialog>   
+                                </div>
+                        </div>
+                        </div>
+                        <div class=" items-center space-y-4 lg:m-auto lg:p-5 lg:w-full md:w-48 sm:w-1/2 border border-black-500 rounded-lg">
+                            <img src="Styles/images/fruit8.png" alt="" class="m-auto">
+                            <h4 class="text-center font-bold text-lg">12.90$ - 18.85$</h4>
+                            <hr class="w-2/3 m-auto">
+                            <p class="text-center">Red Dragon</p>
+                            <div class="grid grid-cols-1 m-auto justify-items-center space-y-4">
+                                <div class="items-center">
+                                    <span class="items-center">
+                                        <i class="fa-solid fa-star" style="color: #fd9696;"></i>
+                                        <i class="fa-solid fa-star-half-stroke" style="color: rgb(255, 117, 117);"></i>
+                                        <i class="fa-solid fa-star" style="color: #ffbebe"></i>
+                                        <i class="fa-solid fa-star" style="color: #ffbebe"></i>
+                                        <i class="fa-solid fa-star" style="color: #ffbebe"></i>
+                                    </span>
+                                
+                                </div>
+                                <div class="items-center">
+                                    <!-- Open the modal using ID.showModal() method -->
+                                    <button class=" text-center font-normal text-fruit-primary text-lg" onclick="my_modal_5.showModal()">Details</button>
+                                    <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+                                    <form method="dialog" class="modal-box">
+                                        <img src="Styles/images/fruit8.png" alt="" class="m-auto">
+                                        <h3 class="font-bold text-lg text-center">Red Dragon</h3>
+                                        <p class="py-4 text-center">Professional employees are there for you to pick the most amazing and fresh fruits.</p>
+                                        <div class="grid grid-cols-1 m-auto justify-items-center space-y-4">
+                                            <div class="items-center">
+                                                <span class="items-center">
+                                                    <i class="fa-solid fa-star" style="color: #fd9696;"></i>
+                                                    <i class="fa-solid fa-star-half-stroke" style="color: rgb(255, 117, 117);"></i>
+                                                    <i class="fa-solid fa-star" style="color: #ffbebe"></i>
+                                                    <i class="fa-solid fa-star" style="color: #ffbebe"></i>
+                                                    <i class="fa-solid fa-star" style="color: #ffbebe"></i>
+                                                </span>
+                                            
+                                            </div>
+                                        <div class="modal-action">
+                                        <!-- if there is a button in form, it will close the modal -->
+                                        <button class=" p-2 text-center font-normal text-fruit-primary text-lg border-fruit-primary border-2 rounded-lg">Close</button>
+                                        <button class="text-center font-normal bg-fruit-primary text-lg text-white p-2 rounded-lg">Buy Now</button>
+                                        </div>
+                                    </form>
+                                    </dialog>                                
+                                </div>
+                        </div>
+                        </div>
+                        <div class=" items-center space-y-4 lg:m-auto lg:p-5 lg:w-full md:w-48 sm:w-1/2 border border-black-500 rounded-lg">
+                            <img src="Styles/images/fruit9.png" alt="" class="m-auto" >
+                            <h4 class="text-center font-bold text-lg">12.90$ - 18.85$</h4>
+                            <hr class="w-2/3 m-auto">
+                            <p class="text-center">Banana</p>
+                                <div class="grid grid-cols-1 m-auto justify-items-center space-y-4">
+                                    <div class="items-center">
+                                        <span class="items-center">
+                                            <i class="fa-solid fa-star" style="color: #fd9696;"></i>
+                                            <i class="fa-solid fa-star-half-stroke" style="color: rgb(255, 117, 117);"></i>
+                                            <i class="fa-solid fa-star" style="color: #ffbebe"></i>
+                                            <i class="fa-solid fa-star" style="color: #ffbebe"></i>
+                                            <i class="fa-solid fa-star" style="color: #ffbebe"></i>
+                                        </span>
+                                    
+                                    </div>
+                                    <div class="items-center">
+                                        <!-- Open the modal using ID.showModal() method -->
+                                    <button class=" text-center font-normal text-fruit-primary text-lg" onclick="my_modal_4.showModal()">Details</button>
+                                    <dialog id="my_modal_4" class="modal modal-bottom sm:modal-middle">
+                                    <form method="dialog" class="modal-box">
+                                        <img src="Styles/images/fruit9.png" alt="" class="m-auto">
+                                        <h3 class="font-bold text-lg text-center">Banana</h3>
+                                        <p class="py-4 text-center">Professional employees are there for you to pick the most amazing and fresh fruits.</p>
+                                        <div class="grid grid-cols-1 m-auto justify-items-center space-y-4">
+                                            <div class="items-center">
+                                                <span class="items-center">
+                                                    <i class="fa-solid fa-star" style="color: #fd9696;"></i>
+                                                    <i class="fa-solid fa-star-half-stroke" style="color: rgb(255, 117, 117);"></i>
+                                                    <i class="fa-solid fa-star" style="color: #ffbebe"></i>
+                                                    <i class="fa-solid fa-star" style="color: #ffbebe"></i>
+                                                    <i class="fa-solid fa-star" style="color: #ffbebe"></i>
+                                                </span>
+                                            
+                                            </div>
+                                        <div class="modal-action">
+                                        <!-- if there is a button in form, it will close the modal -->
+                                        <button class=" p-2 text-center font-normal text-fruit-primary text-lg border-fruit-primary border-2 rounded-lg">Close</button>
+                                        <button class="text-center font-normal bg-fruit-primary text-lg text-white p-2 rounded-lg">Buy Now</button>
+                                        </div>
+                                    </form>
+                                    </dialog>   
+                                    </div>
+                            </div>
+                        </div> 
+                </div>
+           </div>
+        </section>
+        <section class="m-auto justify-items-center">
+            <div class="grid grid-cols-1 m-1 justify-items-center space-y-4">
+            <div class="items-center m-auto">
+                <button class="text-center font-normal bg-fruit-primary text-lg text-white p-2 rounded-lg" >Shop All</button>
+            </div>
+            </div>
+        </section>
+        <section class="w-[1440px] h-auto w-[1440px] my-20 mx-auto justify-items-center bg-[url('Styles/images/team.png')] bg-no-repeat	">
+            <div class="grid grid-cols-1 w-full justify-items-center m-auto py-20 space-y-7">
+                <div class="items-center space-y-7 ">
+                    <h1 class="lg:text-center font-bold text-6xl md:text-center md:text-4xl sm:text-center sm:text-lg text-white">Meet the team section</h1>
+                    <p class="lg:text-center font-normal text-sm md:text-center sm:text-center text-white">Contrary to popular belief, is not simply random text. It has roots in a piece of classical Latin<br> literature from 45 BC, making it over 2000 years old.</p>
+                </div>
+            </div>  
+            <div class="grid grid-cols-1 w-full justify-items-center m-auto w-full">
+                 <div class="grid grid-cols-4 gap-4 py-5 justify-items-center m-auto w-full">  
+                        <div class="items-center space-y-4">
+                                <figure class="px-10 pt-10">
+                                <img src="Styles/images/member1.png" alt=" " class="rounded-full m-auto" />
+                                </figure>
+                                <div class="items-center text-center">
+                                <h2 class="text-center text-white text-2xl font-bold">Awlad Hossain</h2>
+                                <p class="text-center text-white text-xl">Fruits Expert</p>
+                                <div class="grid grid-cols-1 m-auto justify-items-center space-y-4">
+                                    <div class="items-center space-y-4">
+                                        <span class="items-center">
+                                            <i class="fa-brands fa-facebook" style="color: #f86868; font-size: 25px;"></i>
+                                            <i class="fa-brands fa-twitter" style="color: #ff4d4d; font-size: 25px;"></i>
+                                            <i class="fa-brands fa-linkedin" style="color: #ff4242; font-size: 25px;"></i> 
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>  
+                        <div class="items-center space-y-6">
+                                <figure class="px-10 pt-10">
+                                <img src="Styles/images/member2.png" alt=" " class="rounded-full m-auto" />
+                                </figure>
+                                <div class="items-center text-center">
+                                <h2 class="text-center text-white text-2xl font-bold">Safia Chowdhury</h2>
+                                <p class="text-center text-white text-xl">Fruits Expert</p>
+                                <div class="grid grid-cols-1 m-auto justify-items-center space-y-4">
+                                    <div class="items-center space-y-4">
+                                        <span class="items-center">
+                                            <i class="fa-brands fa-facebook" style="color: #f86868; font-size: 25px;"></i>
+                                            <i class="fa-brands fa-twitter" style="color: #ff4d4d; font-size: 25px;"></i>
+                                            <i class="fa-brands fa-linkedin" style="color: #ff4242; font-size: 25px;"></i> 
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="items-center space-y-6 ">
+                            <figure class="px-10 pt-10">
+                            <img src="Styles/images/member3.png" alt=" " class="rounded-full m-auto" />
+                            </figure>
+                            <div class="items-center text-center">
+                            <h2 class="text-center text-white text-2xl font-bold">Rokib Hossain</h2>
+                            <p class="text-center text-white text-xl">Fruits Expert</p>
+                            <div class="grid grid-cols-1 m-auto justify-items-center space-y-4">
+                                <div class="items-center space-y-4">
+                                    <span class="items-center">
+                                        <i class="fa-brands fa-facebook" style="color: #f86868; font-size: 25px;"></i>
+                                        <i class="fa-brands fa-twitter" style="color: #ff4d4d; font-size: 25px;"></i>
+                                        <i class="fa-brands fa-linkedin" style="color: #ff4242; font-size: 25px;"></i> 
+                                    </span>
+                                </div>
+                            </div>
+                        </div>    
+                   </div> 
+                   <div class="items-center space-y-6">
+                    <figure class="px-10 pt-10">
+                    <img src="Styles/images/member4.png" alt=" " class="rounded-full m-auto" />
+                    </figure>
+                    <div class="items-center text-center">
+                    <h2 class="text-center text-white text-2xl font-bold">Chaity</h2>
+                    <p class="text-center text-white text-xl">Fruits Expert</p>
+                    <div class="grid grid-cols-1 m-auto justify-items-center space-y-4">
+                        <div class="items-center space-y-4">
+                            <span class="items-center">
+                                <i class="fa-brands fa-facebook" style="color: #f86868; font-size: 25px;"></i>
+                                <i class="fa-brands fa-twitter" style="color: #ff4d4d; font-size: 25px;"></i>
+                                <i class="fa-brands fa-linkedin" style="color: #ff4242; font-size: 25px;"></i> 
+                            </span>
+                        </div>
+                    </div>
+                 </div>  
+             </div>
+               </div>
+            </div>   
+        </section>
+        <section class="w-[1440px]  mx-auto justify-items-center">
+            <div class="grid grid-cols-1 w-full justify-items-center m-auto space-y-7">
+                <div class="items-center space-y-5">
+                    <h1 class="lg:text-center font-bold text-6xl md:text-center md:text-4xl sm:text-center sm:text-lg text-black">Why Choose Us</h1>
+                    <p class="lg:text-center font-normal text-sm md:text-center sm:text-center text-black">Contrary to popular belief, is not simply random text. It has roots in a piece of classical <br>Latin literature from 45 BC, making it over 2000 years old.</p>
+                </div>
+            </div> 
+        </section>
+        <section class="w-[1440px] my-0 mx-auto justify-items-left">
+            <div class="grid grid-cols-3 gap-3 w-full justify-items-left m-auto space-y-7">
+                <div class="grid grid-cols-1  w-full justify-items-left m-auto py-20 space-y-7">
+                    <div class=" con-1 space-y-4 flex">
+                        <i class="fa-solid fa-users bg-slate-100 rounded-full m-2 p-10"style="font-size: 35px;"></i><br>
+                        <div class="space-y-2">
+                            <h1 class="text-2xl text-left text-black font-bold mx-4">Dedicated Team</h1>
+                            <hr class="w-20 mx-4 text-6xl h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
+                            <p class="mx-4">Professional employees are there for you to pick the most amazing and fresh fruits.</p>
+                        </div>
+                    </div> 
+                    <div class=" con-1 space-y-4 flex">
+                        <i class="fa-solid fa-heart-circle-bolt bg-slate-100 rounded-full m-2 p-10"style="font-size: 35px;"></i><br>
+                        <div class="space-y-2">
+                            <h1 class="text-2xl text-left text-black font-bold mx-4">Fresh is Best</h1>
+                            <hr class="w-20 mx-4 text-6xl h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
+                            <p class="mx-4">Professional employees are there for you to pick the most amazing and fresh fruits.</p>
+                        </div>
+                    </div> 
+                    <div class=" con-1 space-y-4 flex">
+                        <i class="fa-solid fa-gifts bg-slate-100 rounded-full m-2 p-10"style="font-size: 35px;"></i><br>
+                        <div class="space-y-2">
+                            <h1 class="text-2xl text-left text-black font-bold mx-4">Gift Certificates</h1>
+                            <hr class="w-20 mx-4 text-6xl h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
+                            <p class="mx-4">Professional employees are there for you to pick the most amazing and fresh fruits.</p>
+                        </div>
+                    </div>                           
+                </div>
+                <div class="grid grid-cols-1 gap-1 w-full justify-items-right m-auto py-20 space-y-7">
+                    <figure class="px-10 pt-10">
+                        <img src="Styles/images/whychoose1.png" alt=" " class="m-auto" />
+                    </figure>
+                </div>
+                <div class="grid grid-cols-1 gap-1 w-full justify-items-right m-auto py-20 space-y-7">
+                    <div class=" con-1 space-y-4 flex">
+                        <i class="fa-solid fa-bag-shopping bg-slate-100 rounded-full m-2 p-10"style="font-size: 35px;"></i><br>
+                        <div class="space-y-2">
+                            <h1 class="text-2xl text-left text-black font-bold mx-4">Integrated Supplier</h1>
+                            <hr class="w-20 mx-4 text-6xl h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
+                            <p class="mx-4">Professional employees are there for you to pick the most amazing and fresh fruits.</p>
+                        </div>
+                    </div>
+                    <div class=" con-1 space-y-4 flex">
+                        <i class="fa-solid fa-ice-cream bg-slate-100 rounded-full m-2 p-10"style="font-size: 35px;"></i><br>
+                        <div class="space-y-2">
+                            <h1 class="text-2xl text-left text-black font-bold mx-4">Sustainable Practice</h1>
+                            <hr class="w-20 mx-4 text-6xl h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
+                            <p class="mx-4">Professional employees are there for you to pick the most amazing and fresh fruits.</p>
+                        </div>
+                    </div>
+                    <div class=" con-1 space-y-4 flex">
+                        <i class="fa-regular fa-thumbs-up bg-slate-100 rounded-full m-2 p-10"style="font-size: 35px;"></i><br>
+                        <div class="space-y-2">
+                            <h1 class="text-2xl text-left text-black font-bold mx-4">The Benefits Only</h1>
+                            <hr class="w-20 mx-4 text-6xl h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
+                            <p class="mx-4">Professional employees are there for you to pick the most amazing and fresh fruits.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>      
+        </section>
+    </main>
+    <footer class="bg-black h-96 w-full justify-items-center">
+        <div class="grid grid-cols-1 w-full justify-items-center m-auto py-20 space-y-7">
+            <div class="items-center">
+                <a class="btn btn-ghost normal-case text-4xl lg:text-white font-normal md:text-white sm:text-white">
+                <img src="Styles/images/logo.png" alt="Logo" class="w-12 h-12">Fruit Burst</a>
+            </div>     
+        </div>
+        <div class="grid grid-cols-1 m-auto justify-items-center space-y-4">
+            <div class="items-center">
+                <span class="items-center">
+                    <ul class="menu menu-horizontal px-1 text-lg text-white font-medium ">
+                        <li><a>Home</a></li>   
+                        <li><a>About Us</a></li>
+                        <li><a>Shop</a></li>
+                        <li><a>All Fruits</a></li>
+                        <li><a>Support</a></li>
+                        <li><a>My Account</a></li>
+                   </ul>     
+                </span>
+            </div>
+            <div class="grid grid-cols-1 m-auto justify-items-center space-y-4">
+                <div class="items-center">
+                    <span class="items-center">
+                        <i class="fa-brands fa-twitter f-4xl px-2" style="color: #ffffff; font-size: 40px;"></i>
+                        <i class="fa-brands fa-facebook f-4xl px-2" style="color: #ffffff;font-size: 40px;"></i>
+                        <i class="fa-brands fa-youtube f-4xl px-2" style="color: #ffffff;font-size: 40px;"></i>
+                        <i class="fa-brands fa-linkedin-in f-4xl px-2" style="color: #ffffff;font-size: 40px;"></i>
+                        <i class="fa-brands fa-instagram f-4xl px-2" style="color: #ffffff;font-size: 40px;"></i>            
+                        <i class="fa-brands fa-apple f-4xl px-2"style="color: #ffffff;font-size: 40px;"></i>       
+                     </span>
+                
+                </div>
+    </footer>
 </body>
 </html>
